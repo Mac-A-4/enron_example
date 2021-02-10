@@ -1,16 +1,16 @@
 import emails
 
-print("Width: {}".format(emails.matrix.width))
-print("Height: {}".format(emails.matrix.height))
+print("Width: {}".format(emails.width))
+print("Height: {}".format(emails.height))
 
 """
 We want to know if there exists a person who sent emails to 20 other people.
 """
 N = 40 #other people
 
-for i in range(emails.matrix.width): #for each person
+for i in range(emails.width): #for each person
 	connections = 0
-	for j in range(emails.matrix.height): #for each connection
+	for j in range(emails.height): #for each connection
 		if emails.matrix[j,i] == 1: #there is a connection
 			connections += 1
 	if connections >= N:
